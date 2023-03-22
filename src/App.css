@@ -13,8 +13,8 @@ body {
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 400px;
-  max-width: 90%;
+  width: 90%;
+  max-width: 400px;
   margin: 0 auto;
   font-family: sans-serif;
   border: 2px solid #ccc;
@@ -76,4 +76,21 @@ button {
 .counter.zero {
   color: #ee68b6;
   font-weight: bold;
+}
+
+@media (max-width: 600px) {
+  .App {
+    padding: 20px;
+  }
+  
+  button {
+    font-size: 1rem;
+    padding: 10px 20px;
+    margin: 5px;
+  }
+
+  .counter {
+    font-size: 20px;
+    margin-top: 5px;
+  }
 }

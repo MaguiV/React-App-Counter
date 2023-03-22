@@ -14,12 +14,14 @@ function App() {
 
   return (
     <div className="App">
-      <button className="increment" onClick={increment}>
-        Increment
-      </button>
-      <button className="reset" onClick={reset}>
-        Reset
-      </button>
+      <div className="button-container">
+        <button className="increment" onClick={increment}>
+          Increment
+        </button>
+        <button className="reset" onClick={reset}>
+          Reset
+        </button>
+      </div>
       <div className={`counter ${count === 0 ? 'zero' : ''}`}>
         Counter: {count}
       </div>

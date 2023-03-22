@@ -1,42 +1,79 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background: linear-gradient(to top left, #f49ac1, #d37fb9, #b39ddb, #9865b7);
+}
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
+  width: 400px;
+  max-width: 90%;
+  margin: 0 auto;
   font-family: sans-serif;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.4);
+  background-color: #f9f9f9;
+  font-size: 1.2rem;
 }
 
 button {
-  font-size: 16px;
-  padding: 10px 20px;
-  margin: 5px;
+  font-size: 1.2rem;
+  padding: 15px 30px;
+  margin: 10px;
   cursor: pointer;
   border: none;
   transition: background-color 0.2s;
+  border-radius: 10px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  flex: 1;
+  color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  width: 100%;
 }
 
 .increment {
-  background-color: #4caf50;
+  background: linear-gradient(to bottom right, #4fd6cc, #3ac1ba, #27acb3, #1c979d, #0089b7);
+  background-position: bottom;
 }
 
 .increment:active {
-  background-color: #3f9142;
+  background: linear-gradient(to bottom right, #3496a5, #006d7b);
+  background-position: bottom;
 }
 
 .reset {
-  background-color: #f44336;
+  background: linear-gradient(to bottom right, #ff776f, #ff5c50, #ff4032fd, #f7483f);
+  background-position: bottom;
 }
 
 .reset:active {
-  background-color: #d32f2f;
+  background: linear-gradient(to bottom right, #c7544d, #a2331d);
+  background-position: top;
 }
 
 .counter {
   font-size: 24px;
   margin-top: 10px;
+  font-weight: bold;
 }
 
 .counter.zero {
-  color: #ff5722;
+  color: #ee68b6;
+  font-weight: bold;
 }

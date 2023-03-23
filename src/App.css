@@ -94,3 +94,12 @@ button {
     margin-top: 5px;
   }
 }
+
+.joke {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  color: #3f51b5;
+  max-width: 80%;
+  text-align: center;
+}

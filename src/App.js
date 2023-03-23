@@ -1,8 +1,21 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 
 function App() {
   const [count, setCount] = useState(0);
+  const [joke, setJoke] = useState('');
+
+  useEffect(() => {
+    const fetchJoke = async () => {
+      const response = await fetch('https://api.chucknorris.io/jokes/random');
+      const data = await response.json();
+      setJoke(data.value);
+    };
+
+    if (count > 0) {
+      fetchJoke();
+    }
+  }, [count]);
 
   const increment = () => {
     setCount(count + 1);
@@ -10,6 +23,7 @@ function App() {
 
   const reset = () => {
     setCount(0);
+    setJoke('');
   };
 
   return (
@@ -24,6 +38,9 @@ function App() {
       </div>
       <div className={`counter ${count === 0 ? 'zero' : ''}`}>
         Counter: {count}
+      </div>
+      <div className="joke">
+        {joke}
       </div>
     </div>
   );
